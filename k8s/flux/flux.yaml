@@ -1,0 +1,27 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+  namespace: flux
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: flux
+  helmVersion: v3
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: flux
+    version: 1.5.0
+  values:
+    git:
+      url: "git@github.com:devplayer0/gitops-k3d.git"
+      branch: master
+      path: k8s
+      signingKey: BC05AF83345879FB1995111CF6264426CCC466E4
+    syncGarbageCollection:
+      enabled: true
+      dry: false
+    gpgKeys:
+      secretName: flux-pgp
+    sops:
+      enabled: true

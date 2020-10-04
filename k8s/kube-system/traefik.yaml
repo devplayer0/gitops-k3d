@@ -9,6 +9,7 @@ metadata:
     repository.fluxcd.io/traefik: image.name
     tag.fluxcd.io/traefik: image.tag
     filter.fluxcd.io/traefik: glob:2.3.*
+    fluxcd.io/ignore: 'true'
 spec:
   releaseName: traefik
   helmVersion: v3
@@ -19,7 +20,7 @@ spec:
   values:
     image:
       name: ghcr.io/netsoc/traefik
-      tag: 2.3.0-a676620c
+      tag: latest
     deployment:
       replicas: 1
     logs:

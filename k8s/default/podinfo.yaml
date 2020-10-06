@@ -14,5 +14,5 @@ spec:
   values:
     image:
       repository: stefanprodan/podinfo
-      tag: 5.0.1
+      tag: 5.0.2
     replicaCount: 3

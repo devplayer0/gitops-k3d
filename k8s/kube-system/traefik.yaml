@@ -77,7 +77,7 @@ spec:
             - name: KL_VXLAN_INTERFACE
               value: lxd-overlay
             - name: KL_VXLAN_VNI
-              value: 7331
+              value: '7331'
             - name: KL_HOOKS_UP
               value: 'sh,-c,ip addr add $IFACE_IP dev $IFACE'
           ports:

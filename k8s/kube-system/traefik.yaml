@@ -70,8 +70,10 @@ spec:
                   fieldPath: metadata.namespace
 
             - name: IFACE_IP
-              value: '172.24.254.3'
+              value: '172.24.254.3/16'
 
+            - name: KL_LOG_LEVEL
+              value: DEBUG
             - name: KL_SERVICES
               value: 'traefik,webspace-ng/dnsmasq,webspace-ng/lxd8s,webspace-ng/webspaced'
             - name: KL_VXLAN_INTERFACE
